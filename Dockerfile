@@ -39,8 +39,6 @@ RUN mkdir -p /root/.pip && \
     echo "[global]" > /root/.pip/pip.conf && \
     echo "break-system-packages = true" >> /root/.pip/pip.conf
 
-
-
 WORKDIR /opt/cai
 
 # Install CAI 
@@ -57,7 +55,6 @@ RUN echo 'OPENAI_API_KEY="sk-1234"' > /opt/cai/.env && \
 #  logs directory
 RUN mkdir -p /opt/cai/logs
 
-# Startup Script
 # Startup Script
 RUN echo '#!/bin/bash' > /opt/cai/start.sh && \
     echo 'set -e' >> /opt/cai/start.sh && \
